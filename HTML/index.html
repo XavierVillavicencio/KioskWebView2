@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<head>
+    <title>Ejemplos</title>
+</head>
+<body>
+    <h1>Listado de documentos</h1>
+    <ul>
+        <li><button type="button" onclick="RequestData('file:///C:/Users/xavie/Downloads/ejemplos_archivos/ejemplo_001.pdf')">Imprimir ejemplo 001</button></li>
+        <li><button type="button" onclick="RequestData('file:///C:/Users/xavie/Downloads/ejemplos_archivos/ejemplo_002.pdf')">Imprimir ejemplo 002</button></li>
+    </ul>
+    <script>
+        function RequestData(url) {
+             // Access the host object asynchronously
+             window.chrome.webview.postMessage(url);
+             const data = window.chrome.webview;
+             console.info({url});
+             console.info({data});
+        }
+    </script>
+</body>
+</html>
