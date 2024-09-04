@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "xyzWd7UJyes=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\xavie\\source\\repos\\WebView2-Kiosk\\WebView2-Kiosk.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\xavie\\.nuget\\packages\\microsoft.web.webview2\\1.0.2739.15\\microsoft.web.webview2.1.0.2739.15.nupkg.sha512"
+  ],
+  "logs": []
+}
