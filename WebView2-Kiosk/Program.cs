@@ -13,7 +13,7 @@ namespace WebView2_Kiosk
             ApplicationConfiguration.Initialize();
             string cadenaRecibida;
             if (args.Length == 0){
-                cadenaRecibida = "file:///C:/Users/xavie/Downloads/ejemplos_archivos/ejemplo_003.pdf";
+                cadenaRecibida = "";
             } else {
                 cadenaRecibida = args[0];
             }
