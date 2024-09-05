@@ -8,6 +8,9 @@
     ".NETCoreApp,Version=v8.0": {
       "WebView2-Kiosk/1.0.0": {
         "dependencies": {
+          "MSOffice.Interop": "16.0.55555",
+          "Microsoft.Office.Interop.Excel": "15.0.4795.1001",
+          "Microsoft.Office.Interop.Word": "15.0.4797.1004",
           "Microsoft.Web.WebView2": "1.0.2739.15",
           "Microsoft.Web.WebView2.Core": "1.0.2739.15",
           "Microsoft.Web.WebView2.WinForms": "1.0.2739.15",
@@ -15,6 +18,15 @@
         },
         "runtime": {
           "WebView2-Kiosk.dll": {}
+        }
+      },
+      "Microsoft.Office.Interop.Excel/15.0.4795.1001": {},
+      "Microsoft.Office.Interop.Word/15.0.4797.1004": {
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Office.Interop.Word.dll": {
+            "assemblyVersion": "15.0.0.0",
+            "fileVersion": "15.0.4797.1003"
+          }
         }
       },
       "Microsoft.Web.WebView2/1.0.2739.15": {
@@ -33,6 +45,26 @@
             "rid": "win-x86",
             "assetType": "native",
             "fileVersion": "1.0.2739.15"
+          }
+        }
+      },
+      "MSOffice.Interop/16.0.55555": {
+        "runtime": {
+          "lib/Microsoft.Office.Interop.Access.Dao.dll": {
+            "assemblyVersion": "16.0.0.0",
+            "fileVersion": "16.0.11929.20048"
+          },
+          "lib/Microsoft.Office.Interop.Access.dll": {
+            "assemblyVersion": "16.0.0.0",
+            "fileVersion": "16.0.13231.20098"
+          },
+          "lib/Microsoft.Office.Interop.Excel.dll": {
+            "assemblyVersion": "16.0.0.0",
+            "fileVersion": "16.0.55555.10000"
+          },
+          "lib/Microsoft.Office.Interop.Visio.WorkflowAuthoring.dll": {
+            "assemblyVersion": "16.0.0.0",
+            "fileVersion": "16.0.55555.10000"
           }
         }
       },
@@ -68,12 +100,33 @@
       "serviceable": false,
       "sha512": ""
     },
+    "Microsoft.Office.Interop.Excel/15.0.4795.1001": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-cuvqi/U5MYSM0gvR2l90q0m/urRgmg69EiwP5VWp1RcaJ0YT5G26Va5LaOZ3KJFc22FNihS5CUjeePUp2YpGQA==",
+      "path": "microsoft.office.interop.excel/15.0.4795.1001",
+      "hashPath": "microsoft.office.interop.excel.15.0.4795.1001.nupkg.sha512"
+    },
+    "Microsoft.Office.Interop.Word/15.0.4797.1004": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-lavTOrMGK/o/t3+gGr7JuVrL8XDdnS0DwPLcYv/StOiysXO4L0C36IXTVtEJo1Mh9Aoxo9a8dgGcPi+faTlv0g==",
+      "path": "microsoft.office.interop.word/15.0.4797.1004",
+      "hashPath": "microsoft.office.interop.word.15.0.4797.1004.nupkg.sha512"
+    },
     "Microsoft.Web.WebView2/1.0.2739.15": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-hZg7vHWBg4RIiK3rhkNqX3hcBqqoVXVrrO2BVrVOiSmEgfLa7lY64G1tWh2VY84MfHIFLCAQNwn3Rwvu+ICHyw==",
       "path": "microsoft.web.webview2/1.0.2739.15",
       "hashPath": "microsoft.web.webview2.1.0.2739.15.nupkg.sha512"
+    },
+    "MSOffice.Interop/16.0.55555": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ctWqp4Y+Efp2YFoErVytPAtV0uqDnzLsmvbXQ4FoSj8H4b8fWkyaYtSn9heXiV+spd7laeLUYHgy/P+PTzaV2g==",
+      "path": "msoffice.interop/16.0.55555",
+      "hashPath": "msoffice.interop.16.0.55555.nupkg.sha512"
     },
     "Microsoft.Web.WebView2.Core/1.0.2739.15": {
       "type": "reference",

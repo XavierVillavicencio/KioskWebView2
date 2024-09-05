@@ -2,6 +2,24 @@
   "version": 3,
   "targets": {
     "net8.0-windows7.0": {
+      "Microsoft.Office.Interop.Excel/15.0.4795.1001": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Office.Interop.Excel.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Office.Interop.Excel.dll": {}
+        }
+      },
+      "Microsoft.Office.Interop.Word/15.0.4797.1004": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Office.Interop.Word.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Office.Interop.Word.dll": {}
+        }
+      },
       "Microsoft.Web.WebView2/1.0.2739.15": {
         "type": "package",
         "build": {
@@ -21,10 +39,51 @@
             "rid": "win-x86"
           }
         }
+      },
+      "MSOffice.Interop/16.0.55555": {
+        "type": "package",
+        "compile": {
+          "lib/Microsoft.Office.Interop.Access.Dao.dll": {},
+          "lib/Microsoft.Office.Interop.Access.dll": {},
+          "lib/Microsoft.Office.Interop.Excel.dll": {},
+          "lib/Microsoft.Office.Interop.Visio.WorkflowAuthoring.dll": {}
+        },
+        "runtime": {
+          "lib/Microsoft.Office.Interop.Access.Dao.dll": {},
+          "lib/Microsoft.Office.Interop.Access.dll": {},
+          "lib/Microsoft.Office.Interop.Excel.dll": {},
+          "lib/Microsoft.Office.Interop.Visio.WorkflowAuthoring.dll": {}
+        }
       }
     }
   },
   "libraries": {
+    "Microsoft.Office.Interop.Excel/15.0.4795.1001": {
+      "sha512": "cuvqi/U5MYSM0gvR2l90q0m/urRgmg69EiwP5VWp1RcaJ0YT5G26Va5LaOZ3KJFc22FNihS5CUjeePUp2YpGQA==",
+      "type": "package",
+      "path": "microsoft.office.interop.excel/15.0.4795.1001",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net20/Microsoft.Office.Interop.Excel.dll",
+        "lib/netstandard2.0/Microsoft.Office.Interop.Excel.dll",
+        "microsoft.office.interop.excel.15.0.4795.1001.nupkg.sha512",
+        "microsoft.office.interop.excel.nuspec"
+      ]
+    },
+    "Microsoft.Office.Interop.Word/15.0.4797.1004": {
+      "sha512": "lavTOrMGK/o/t3+gGr7JuVrL8XDdnS0DwPLcYv/StOiysXO4L0C36IXTVtEJo1Mh9Aoxo9a8dgGcPi+faTlv0g==",
+      "type": "package",
+      "path": "microsoft.office.interop.word/15.0.4797.1004",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net20/Microsoft.Office.Interop.Word.dll",
+        "lib/netstandard2.0/Microsoft.Office.Interop.Word.dll",
+        "microsoft.office.interop.word.15.0.4797.1004.nupkg.sha512",
+        "microsoft.office.interop.word.nuspec"
+      ]
+    },
     "Microsoft.Web.WebView2/1.0.2739.15": {
       "sha512": "hZg7vHWBg4RIiK3rhkNqX3hcBqqoVXVrrO2BVrVOiSmEgfLa7lY64G1tWh2VY84MfHIFLCAQNwn3Rwvu+ICHyw==",
       "type": "package",
@@ -117,10 +176,28 @@
         "tools/wv2winrt/zh-Hans/System.CommandLine.resources.dll",
         "tools/wv2winrt/zh-Hant/System.CommandLine.resources.dll"
       ]
+    },
+    "MSOffice.Interop/16.0.55555": {
+      "sha512": "ctWqp4Y+Efp2YFoErVytPAtV0uqDnzLsmvbXQ4FoSj8H4b8fWkyaYtSn9heXiV+spd7laeLUYHgy/P+PTzaV2g==",
+      "type": "package",
+      "path": "msoffice.interop/16.0.55555",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/Microsoft.Office.Interop.Access.Dao.dll",
+        "lib/Microsoft.Office.Interop.Access.dll",
+        "lib/Microsoft.Office.Interop.Excel.dll",
+        "lib/Microsoft.Office.Interop.Visio.WorkflowAuthoring.dll",
+        "msoffice.interop.16.0.55555.nupkg.sha512",
+        "msoffice.interop.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     "net8.0-windows7.0": [
+      "MSOffice.Interop >= 16.0.55555",
+      "Microsoft.Office.Interop.Excel >= 15.0.4795.1001",
+      "Microsoft.Office.Interop.Word >= 15.0.4797.1004",
       "Microsoft.Web.WebView2 >= 1.0.2739.15"
     ]
   },
@@ -176,6 +253,18 @@
       "net8.0-windows7.0": {
         "targetAlias": "net8.0-windows",
         "dependencies": {
+          "MSOffice.Interop": {
+            "target": "Package",
+            "version": "[16.0.55555, )"
+          },
+          "Microsoft.Office.Interop.Excel": {
+            "target": "Package",
+            "version": "[15.0.4795.1001, )"
+          },
+          "Microsoft.Office.Interop.Word": {
+            "target": "Package",
+            "version": "[15.0.4797.1004, )"
+          },
           "Microsoft.Web.WebView2": {
             "target": "Package",
             "version": "[1.0.2739.15, )"
@@ -203,5 +292,17 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'MSOffice.Interop 16.0.55555' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "MSOffice.Interop",
+      "targetGraphs": [
+        "net8.0-windows7.0"
+      ]
+    }
+  ]
 }

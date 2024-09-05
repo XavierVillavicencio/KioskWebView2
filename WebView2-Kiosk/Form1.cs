@@ -1,8 +1,7 @@
-using System;
-using System.Windows.Forms;
 using Microsoft.Web.WebView2.Core;
 using System.Diagnostics;
-using Timer = System.Threading.Timer;
+using Microsoft.Office.Interop.Word;
+using Microsoft.Office.Interop.Excel;
 
 namespace WebView2_Kiosk
 {
@@ -39,7 +38,7 @@ namespace WebView2_Kiosk
 
         private void WebView2_NavigationStarting(object sender, CoreWebView2NavigationStartingEventArgs args)
         {
-            PrintSilently();
+            // PrintSilently();
             // Desuscribirse del evento NavigationStarting para que se ejecute solo una vez
             ContenedorWebView2.NavigationStarting -= WebView2_NavigationStarting;
         }
@@ -47,7 +46,7 @@ namespace WebView2_Kiosk
         private void Imprimir_Click_1(object sender, EventArgs e)
         {
 
-            PrintSilently();
+            PrintWordFile();
         }
 
         // Método para imprimir en modo silencioso
@@ -63,6 +62,22 @@ namespace WebView2_Kiosk
             // Imprime en modo silencioso
             coreWebView2.PrintAsync(printSettings);
             // System.Environment.Exit(1);
+        }
+
+        private void PrintWordFile()
+        {
+            // Crear una instancia de Word
+            Microsoft.Office.Interop.Word.Application wordApp = new Microsoft.Office.Interop.Word.Application();
+
+            // Abrir el documento
+            Document doc = wordApp.Documents.Open("PRODUBANCO-04-09-2024.docx");
+
+            // Configurar opciones de impresión (opcional)
+            // Ejemplo: Imprimir 2 copias
+            doc.PrintOut();
+
+            // Cerrar Word
+            wordApp.Quit();
         }
     }
 }

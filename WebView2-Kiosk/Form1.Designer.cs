@@ -64,9 +64,9 @@ namespace WebView2_Kiosk
             ContenedorWebView2.BackgroundImageLayout = ImageLayout.None;
             ContenedorWebView2.CreationProperties = null;
             ContenedorWebView2.DefaultBackgroundColor = Color.White;
-            ContenedorWebView2.Location = new Point(274, 100);
+            ContenedorWebView2.Location = new Point(30, 37);
             ContenedorWebView2.Name = "ContenedorWebView2";
-            ContenedorWebView2.Size = new Size(377, 795);
+            ContenedorWebView2.Size = new Size(280, 268);
             ContenedorWebView2.Source = new Uri("file:///C:/Users/xavie/Downloads/ejemplos_archivos/ejempl_001.pdf", UriKind.Absolute);
             ContenedorWebView2.TabIndex = 2;
             ContenedorWebView2.ZoomFactor = 1D;

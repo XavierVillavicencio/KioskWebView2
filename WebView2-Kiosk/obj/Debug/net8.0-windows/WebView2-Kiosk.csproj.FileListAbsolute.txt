@@ -25,3 +25,8 @@ C:\Users\xavie\source\repos\WebView2-Kiosk\bin\Debug\net8.0-windows\Microsoft.We
 C:\Users\xavie\source\repos\WebView2-Kiosk\bin\Debug\net8.0-windows\Microsoft.Web.WebView2.WinForms.xml
 C:\Users\xavie\source\repos\WebView2-Kiosk\obj\Debug\net8.0-windows\WebView2-Kiosk.csproj.AssemblyReference.cache
 C:\Users\xavie\source\repos\WebView2-Kiosk\obj\Debug\net8.0-windows\WebView2.EE97B852.Up2Date
+C:\Users\xavie\source\repos\WebView2-Kiosk\bin\Debug\net8.0-windows\Microsoft.Office.Interop.Excel.dll
+C:\Users\xavie\source\repos\WebView2-Kiosk\bin\Debug\net8.0-windows\Microsoft.Office.Interop.Word.dll
+C:\Users\xavie\source\repos\WebView2-Kiosk\bin\Debug\net8.0-windows\Microsoft.Office.Interop.Access.Dao.dll
+C:\Users\xavie\source\repos\WebView2-Kiosk\bin\Debug\net8.0-windows\Microsoft.Office.Interop.Access.dll
+C:\Users\xavie\source\repos\WebView2-Kiosk\bin\Debug\net8.0-windows\Microsoft.Office.Interop.Visio.WorkflowAuthoring.dll
