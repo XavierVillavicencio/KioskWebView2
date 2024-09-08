@@ -62,7 +62,7 @@ namespace BaseEjemplo2
             webView21.Location = new Point(39, 76);
             webView21.Name = "webView21";
             webView21.Size = new Size(501, 352);
-            webView21.Source = new Uri("https://impresiontest.test/", UriKind.Absolute);
+            webView21.Source = new Uri("http://localhost:4200/", UriKind.Absolute);
             webView21.TabIndex = 2;
             webView21.ZoomFactor = 1D;
             // 
