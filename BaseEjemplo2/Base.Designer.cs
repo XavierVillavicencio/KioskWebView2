@@ -34,6 +34,7 @@ namespace BaseEjemplo2
             textBox1 = new TextBox();
             webView21 = new Microsoft.Web.WebView2.WinForms.WebView2();
             button1 = new Button();
+            comboBox1 = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)webView21).BeginInit();
             SuspendLayout();
             // 
@@ -76,11 +77,20 @@ namespace BaseEjemplo2
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(578, 112);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(121, 23);
+            comboBox1.TabIndex = 4;
+            // 
             // Base
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(comboBox1);
             Controls.Add(button1);
             Controls.Add(webView21);
             Controls.Add(textBox1);
@@ -88,6 +98,7 @@ namespace BaseEjemplo2
             Name = "Base";
             Text = "Form1";
             Load += Form1_LoadAsync;
+            Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)webView21).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -99,5 +110,17 @@ namespace BaseEjemplo2
         private TextBox textBox1;
         private Microsoft.Web.WebView2.WinForms.WebView2 webView21;
         private Button button1;
+        private ComboBox comboBox1;
+    }
+
+    public class Opcion
+    {
+        public string Id { get; set; }
+        public string Name { get; set; }
+
+        public override string ToString()
+        {
+            return Name; // Esto permite mostrar solo el nombre en el ComboBox
+        }
     }
 }
